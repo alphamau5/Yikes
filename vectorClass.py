@@ -1,3 +1,15 @@
+'''
+Here is an n-dimensional vector class.
+
+This class can compute vector-scalar multiplication, the inner product of 
+two vectors, addition of vectors, and multiple combinations.
+
+Purpose:
+- create a custom type (Vector) and manipulate a Python class successfully
+- implement operators for classes such as __init__ and __setitem__
+- combine Python fundamentals with exceptions to ensure proper input
+'''
+
 class Vector:
     
     def __init__(self, l):
