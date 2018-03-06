@@ -50,9 +50,8 @@ class Vector:
                     x.append(self.l[u]*other.l[u])
                     u+=1
                 return sum(x)
-                #dot product
                 
-            else: #not the same dimension, raise an error
+            else: 
                 raise ValueError
         else: 
             pass
