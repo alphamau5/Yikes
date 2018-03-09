@@ -1,9 +1,6 @@
 '''
 Converts CAD to EUR, USD, or JPY using real-time currency exchange from the Bank of Canada.
-
 Inputs (for now): euro, usd, or yen
-
-Plan to add more eventually, hopefully in a more efficient and user friendly way.
 '''
 
 import urllib.request as urllib
