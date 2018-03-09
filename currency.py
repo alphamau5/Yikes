@@ -19,7 +19,7 @@ if which_cur == 'euro':
 elif which_cur == 'usd':
     x = 'USD'
 elif which_cur == 'yen':
-    x == 'JPY'
+    x = 'JPY'
 
 url = 'https://www.bankofcanada.ca/valet/fx_rss/FX' + str(x) + 'CAD'    
 response = urllib.urlopen(url)
