@@ -12,7 +12,7 @@ import datetime
 today = datetime.date.today()
 
 print('This is a CAD currency converter')
-which_cur = str(input('Choose euro/usd/jap: '))
+which_cur = str(input('Choose euro/usd/yen: '))
 
 if which_cur == 'euro':
     x = 'EUR'
