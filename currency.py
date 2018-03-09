@@ -11,28 +11,41 @@ import re
 import datetime
 today = datetime.date.today()
 
-print('This is a CAD currency converter')
-which_cur = str(input('Choose euro/usd/yen: '))
+print('This is a CAD currency converter\nType q to quit')
 
-if which_cur == 'euro':
-    x = 'EUR'
-elif which_cur == 'usd':
-    x = 'USD'
-elif which_cur == 'yen':
-    x = 'JPY'
+def choose_currency():
 
-url = 'https://www.bankofcanada.ca/valet/fx_rss/FX' + str(x) + 'CAD'    
-response = urllib.urlopen(url)
+	which_cur = str(input('\nChoose euro/usd/yen: '))
 
-for line in response:
-    if 'value decimals' in str(line):
-        line_with_cur = str(line)
+	if which_cur == 'euro':
+	    conversion('EUR')
+	elif which_cur == 'usd':
+	    conversion('USD')
+	elif which_cur == 'yen':
+	    conversion('JPY')
+	elif which_cur == 'q':
+		quit()
+	else:
+		print("Not a valid currency")
+		choose_currency()
 
-find_cur = re.findall("\d+\.\d+", line_with_cur)
-cur = float(find_cur[0])
+def conversion(x):
 
-print('1 ' + str(x) + ' =', cur, 'CAD as of', str(today) + '\n')
+	url = 'https://www.bankofcanada.ca/valet/fx_rss/FX' + x + 'CAD'    
+	response = urllib.urlopen(url)
 
-amount = float(input('CAD: '))
-conversion = amount/cur
-print(round(amount,2), 'CAD is ' + str(round(conversion,2)) + ' ' + str(x))
+	for line in response:
+	    if 'value decimal' in str(line):
+	        line_with_cur = str(line)
+
+	find_cur = re.findall("\d+\.\d+", line_with_cur)
+	cur = float(find_cur[0])
+	print('1 ' + x + ' =', cur, 'CAD as of', str(today))
+
+	amount = float(input('CAD: '))
+	convert = amount/cur
+	print(round(amount,2), 'CAD is ' + str(round(convert,2)) + ' ' + x)
+	choose_currency()
+
+choose_currency()
+
