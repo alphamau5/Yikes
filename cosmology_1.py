@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from math import pi, sqrt
+from math import sqrt
 from scipy.integrate import quad
 
 class Angular_Distance:
