@@ -43,6 +43,9 @@ def conversion(x):
 	print('1 ' + x + ' =', cur, 'CAD as of', str(today))
 
 	amount = float(input('CAD: '))
+	if amount < 0:
+		amount = abs(amount)
+		
 	convert = amount/cur
 	print(round(amount,2), 'CAD is ' + str(round(convert,2)) + ' ' + x)
 	choose_currency()
