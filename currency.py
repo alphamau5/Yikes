@@ -1,6 +1,9 @@
 '''
 Converts CAD to EUR, USD, or JPY using real-time currency exchange from the Bank of Canada.
 Inputs (for now): euro, usd, or yen
+
+To do:
+Solve the same problem but by using XML module rather than by parsing through HTML as follows.
 '''
 
 import urllib.request as urllib
@@ -45,4 +48,3 @@ def conversion(x):
 	choose_currency()
 
 choose_currency()
-
