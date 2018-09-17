@@ -1,0 +1,27 @@
+{
+  "users": {
+    "nico": [
+      {
+        "password": "abcd"
+      },
+      {
+        "general": {
+          "first_n": "nico",
+          "last_n": "stepan",
+          "gender": "male",
+          "location": {
+            "country": "Canada",
+            "location": "Hamilton, ON"
+          }
+        }
+      },
+      {
+        "bucket_list": [
+          "fly plane",
+          "buy a car newer than 2006",
+          "go to space"
+        ]
+      }
+    ]
+  }
+}
